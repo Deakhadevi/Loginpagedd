@@ -1,0 +1,30 @@
+line 26 ---  -- myfirstdb
+
+
+line 32 -- username 
+
+line 35 -- password
+
+line 40 -- host
+
+line 44  port
+
+give username and password
+here your username is postgres and password is EagleEye
+ uncomment lines 40 and 44
+
+
+rails new userform -d postgresql
+     
+      t.string :name
+      t.string :email
+      t.string :address
+      t.string :password_digest
+      t.string :phone_number
+      t.bigint :role_id
+      t.datetime :reset_password_sent_at
+      t.string :reset_pass 
+      t.datetime :remember_created_at
+!params[:name].empty? and !params[:email].empty? and params[:address].empty? and !params[:password].empty? and !params[:phone_number].empty? and !params[:role_id].nil?
+
+has_secure_password
